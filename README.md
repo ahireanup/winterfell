@@ -1,3 +1,3 @@
 # winterfell
 
-Fun Alogorithm solutions
+Fun Algorithm solutions
