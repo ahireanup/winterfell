@@ -6,16 +6,16 @@ import java.util.Queue;
 
 public class LevelOrder {
 	
-	public ArrayList<Integer> traverseLevelOrder(Node root) {
+	public ArrayList<Integer> traverseLevelOrder(TreeNode<Integer> root) {
 		if(root ==null) return null;
 		
-		Queue <Node> queue = new LinkedList<Node>();
+		Queue <TreeNode<Integer>> queue = new LinkedList<TreeNode<Integer>>();
 		ArrayList<Integer> results = new ArrayList<Integer>();
 		
 		queue.add(root);
 		
 		while(!queue.isEmpty()) {
-			Node current =queue.remove();
+			TreeNode <Integer> current =queue.remove();
 			results.add(current.data);
 			if(current.left!=null)
 				queue.add(current.left);
@@ -29,16 +29,16 @@ public class LevelOrder {
 
 	public static void main (String [] args) {
 		
-		Node root = new Node(1);
+		TreeNode<Integer> root = new TreeNode<Integer>(1);
 
-		root.left = new Node(2);
-		root.right = new Node(3);
+		root.left = new TreeNode<Integer>(2);
+		root.right = new TreeNode<Integer>(3);
 
-		root.left.left = new Node(4);
-		root.left.right = new Node(5);
+		root.left.left = new TreeNode<Integer>(4);
+		root.left.right = new TreeNode<Integer>(5);
 
-		root.right.left = new Node(6);
-		root.right.right = new Node(7);
+		root.right.left = new TreeNode<Integer>(6);
+		root.right.right = new TreeNode<Integer>(7);
 
 		LevelOrder lo = new LevelOrder ();
 		ArrayList <Integer> results = lo.traverseLevelOrder(root);
