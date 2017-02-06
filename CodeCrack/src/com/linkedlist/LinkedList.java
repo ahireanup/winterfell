@@ -21,5 +21,21 @@ public class LinkedList {
 
 	public void add(int data, int index) {
 
+		Node<Integer> current = head;
+		int count = 0;
+		while (count < index - 1) {
+			current = current.next;
+			count++;
+		}
+
+		Node<Integer> newNode = new Node<Integer>(data);
+		newNode.next = current.next;
+		current.next = newNode;
+		listSize++;
+
+	}
+
+	public static void main(String[] args) {
+
 	}
 }
