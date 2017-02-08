@@ -20,8 +20,7 @@ public class LevelOrder {
 			if(current.left!=null)
 				queue.add(current.left);
 			if(current.right!=null)
-				queue.add(current.right);
-			
+				queue.add(current.right);	
 		}
 		return results;
 		
@@ -43,8 +42,7 @@ public class LevelOrder {
 		LevelOrder lo = new LevelOrder ();
 		ArrayList <Integer> results = lo.traverseLevelOrder(root);
 		for (int i : results) {
-			System.out.print (i + " ");
-			
+			System.out.print (i + " ");		
 		}
 		
 	}

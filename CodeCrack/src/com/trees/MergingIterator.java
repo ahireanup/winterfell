@@ -27,7 +27,6 @@ public class MergingIterator implements Iterator {
 			values.offer(iter.next());
 			}
 		}
-
 	}
 
 	@Override
