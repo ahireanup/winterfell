@@ -32,23 +32,23 @@ public class TopKFrequent {
 			}
 		}
 
-		PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>(new Comparator<Pair>() {
+		PriorityQueue<Pair> maxHeap = new PriorityQueue<Pair>(new Comparator<Pair>() {
 
 			@Override
 			public int compare(Pair o1, Pair o2) {
-				return o1.count - o2.count;
+				return o2.count - o1.count;
 			}
 
 		});
 		for (Map.Entry<Integer, Integer> entry : hashmap.entrySet()) {
 			Pair p = new Pair(entry.getKey(), entry.getValue());
-			minHeap.offer(p);
+			maxHeap.offer(p);
 		}
 
 		List<Integer> result = new ArrayList<Integer>();
 
 		while (k > 0) {
-			result.add(minHeap.poll().num);
+			result.add(maxHeap.poll().num);
 			k--;
 
 		}
