@@ -1,4 +1,4 @@
-package com.strings.and.arrays;
+package com.strings_arrays;
 
 public class ReverseString {
 

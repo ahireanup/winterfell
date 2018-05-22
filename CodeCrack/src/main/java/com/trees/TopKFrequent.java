@@ -14,7 +14,7 @@ class Pair {
 	int num;
 	int count;
 
-	public Pair(int num, int count) {
+	Pair(int num, int count) {
 		this.num = num;
 		this.count = count;
 	}

@@ -1,6 +1,6 @@
-package com.strings.and.arrays;
+package com.strings_arrays;
 
-public class twentypercenty {
+public class TwentyPercenty {
 	public static void main (String [] args) {
 		
 		String str ="the dog is";
